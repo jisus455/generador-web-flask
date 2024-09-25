@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="login.css">
+    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}"> -->
+</head>
+
+<body>
+
+    <section class="container">
+        <form method="post" action="cuil">
+            <h3>Generador de CUIL</h3>
+
+            <div class="group-genero">
+                <label>GENERO</label>
+                <select name="genero">
+                    <option value="M">Masculino</option>
+                    <option value="F">Femenino</option>
+                </select>
+            </div>
+
+            <div class="group-dni">
+                <label>DNI</label>
+                <input type="number" name="dni">
+            </div>
+
+            <div class="group-cuil">
+                <label>CUIL</label>
+                {%if cuil %}
+                <p>{{cuil}}</p>
+                {% endif %}
+            </div>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+    </section>
+</body>
+
+</html>
