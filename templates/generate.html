@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="login.css">
-    <!-- <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}"> -->
+    <title>Generador</title>
+    <link rel="stylesheet" href="generate.css">
 </head>
 
 <body>
 
     <section class="container">
-        <form method="post" action="cuil">
-            <h3>Generador de CUIL</h3>
+        <form method="post">
+            <h2>GENERADOR DE CUIL</h2>
 
             <div class="group-genero">
                 <label>GENERO</label>
@@ -28,14 +27,7 @@
                 <input type="number" name="dni">
             </div>
 
-            <div class="group-cuil">
-                <label>CUIL</label>
-                {%if cuil %}
-                <p>{{cuil}}</p>
-                {% endif %}
-            </div>
-
-            <button type="submit" class="btn">Enviar</button>
+            <button type="submit" class="btn">Generar</button>
         </form>
     </section>
 </body>
