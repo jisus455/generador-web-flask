@@ -1,4 +1,4 @@
-from flask import Flask, redirect, session, render_template, send_from_directory, request
+from flask import Flask, redirect, session, render_template, send_from_directory, request, send_file
 from os import path
 
 from business.CuilGenerate import CuilGenerate
@@ -29,6 +29,10 @@ def index():
 
         return render_template("index.html", cuil=cuil, error=error)    
 
+@app.route("/download")
+def downloadFile():
+    pathFile = path.join(app.root_path, 'static', 'result', 'data.txt')
+    return send_file(pathFile, as_attachment=True)
 
 @app.route("/index.css")
 def styleGenerate():
