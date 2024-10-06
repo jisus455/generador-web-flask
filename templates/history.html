@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial</title>
+    <link rel="stylesheet" href="history.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <h2>HISTORIAL DE CUIL</h2>
+
+            <table>
+                <thead class="table-thead">
+                    <tr>
+                        {% for item in column %}
+                        <th>{{item}}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody class="table-tbody">
+                    {% for item in history %}
+                    <tr>
+                        <td>{{item['genero']}}</td>
+                        <td>{{item['dni']}}</td>
+                        <td>{{item['cuil']}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+
+            <a class="btn-return" href="/">Volver</a>
+        </div>
+    </section>
+</body>
+
+</html>

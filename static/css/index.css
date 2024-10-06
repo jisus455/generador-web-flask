@@ -89,3 +89,19 @@ select, input{
 .btn-download:hover {
     background-color: violet;
 }
+
+.btn-history {
+    background-color: crimson;
+    color: white;
+    border: none;
+    font-size: medium;
+    padding: 6px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-history:hover {
+    background-color: brown;
+}
+
