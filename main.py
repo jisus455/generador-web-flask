@@ -41,7 +41,6 @@ def styleIndex():
 def history():
     history = HistoryData().getHistory()  
     column =  HistoryData().getColumn()  
-    print(column)
     return render_template("history.html", history=history, column=column)    
     
 @app.route("/history.css")

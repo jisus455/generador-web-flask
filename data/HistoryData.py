@@ -7,7 +7,7 @@ class HistoryData:
 
     def getColumn(self):
         return self.column
-
+    
     def getHistory(self):
         return self.history
     
